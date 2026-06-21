@@ -1,6 +1,7 @@
-<script setup>
+<script setup lang="ts">
 
 //PROPS
+/*
 defineProps({
   count: {
     type: Number,
@@ -15,9 +16,23 @@ defineProps({
     default: false
   }
 })
+*/
+interface CounterProps {
+  count: number,
+  label: string,
+  disabled?: boolean
+}
+
+defineProps<CounterProps>()
+
 
 //EMITS
-defineEmits(['increment', 'decrement', 'reset'])
+//defineEmits(['increment', 'decrement', 'reset'])
+defineEmits<{
+  'increment': [number],
+  'decrement': [number],
+  'reset': []
+}>()
 
 </script>
 
