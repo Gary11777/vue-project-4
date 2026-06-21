@@ -39,7 +39,7 @@ const resetAllCounts = () => {
   <Counter 
     v-for="breed in dog_breeds" 
     :label="breed.label" 
-    :count="breed.count"
+    :count="breed.count.toString()"
     :disabled="breed.disabled"
     @increment="amount => handleIncrement(breed, amount)"
     @decrement="amount => handleDecrement(breed, amount)"

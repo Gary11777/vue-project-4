@@ -1,24 +1,37 @@
-<script setup>
+<script setup lang="ts">
 import {computed} from 'vue'
 
 //PROPS
-const props = defineProps({
-  counterLabel: {
-    type: String,
-    required: true
-  },
-  itemLabel: {
-    type: String,
-    required: true
-  },
-  data: {
-    type: Array,
-    required: true
-  }
-})
+// const props = defineProps({
+//   counterLabel: {
+//     type: String,
+//     required: true
+//   },
+//   itemLabel: {
+//     type: String,
+//     required: true
+//   },
+//   data: {
+//     type: Array,
+//     required: true
+//   }
+// })
+interface CounterSummaryProps {
+  counterLabel: string,
+  itemLabel: string,
+  data: Array<{
+    label: string,
+    count: number,
+    disabled?: boolean
+  }>
+}
+const props = defineProps<CounterSummaryProps>()
 
 //EMITS
-defineEmits(['resetAll'])
+//defineEmits(['resetAll'])
+defineEmits<{
+  'resetAll': []
+}>()
 
 //COMPUTED
 
@@ -56,7 +69,7 @@ button{
   opacity:0.5;
   background: none;
   border: 0;
-  color:white;
+  color: gray;
   transition: opacity 0.3s;
   font-size:0.9rem;
 }
