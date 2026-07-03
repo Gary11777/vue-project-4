@@ -1,7 +1,8 @@
 <script setup>
 import Counter from '@/components/Counter.vue'
 import CounterSummary from '@/components/CounterSummary.vue'
-import {ref} from 'vue'
+import ReactivityFundamentals from '@/components/ReactivityFundamentals.vue'
+import { ref } from 'vue'
 
 //Data
 const dog_breeds = ref([
@@ -12,29 +13,28 @@ const dog_breeds = ref([
 {label: 'Bulldog', count: 0, disabled: true},
 ])
 
-//HANDLERS
-//Increase count for breed
 const handleIncrement = (breed, amount) => {
   breed.count += amount
 }
 
-//Decrease count for breed
 const handleDecrement = (breed, amount) => {
   if (breed.count - amount >= 0) breed.count -= amount
 }
 
-//Reset all counts
 const resetAllCounts = () => {
   dog_breeds.value.forEach(breed => {
     breed.count = 0
   })
 }
-
 </script>
 
 <template>
-  <h1>Dog Park Counter</h1>
 
+  <!-- Components -->
+  <ReactivityFundamentals />
+
+  <!-- Dog Park Counter -->
+  <h1>Dog Park Counter</h1>
   <div class="breed-list">
   <Counter 
     v-for="breed in dog_breeds" 
@@ -60,6 +60,6 @@ const resetAllCounts = () => {
   display: flex;
   flex-direction: column;
   gap: 1rem;
-  grid-column: 1 / -1; /* spans full width inside the 2-column #app grid */
+  grid-column: 1 / -1;
 }
 </style>
