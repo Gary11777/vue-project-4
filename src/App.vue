@@ -2,6 +2,7 @@
 import Counter from '@/components/Counter.vue'
 import CounterSummary from '@/components/CounterSummary.vue'
 import ReactivityFundamentals from '@/components/ReactivityFundamentals.vue'
+import ComputedProperties from '@/components/ComputedProperties.vue'
 import { ref } from 'vue'
 
 //Data
@@ -31,6 +32,7 @@ const resetAllCounts = () => {
 <template>
 
   <!-- Components -->
+  <ComputedProperties />
   <ReactivityFundamentals />
 
   <!-- Dog Park Counter -->
