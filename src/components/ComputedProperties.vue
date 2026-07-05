@@ -23,13 +23,3 @@ const publishedBooksMessage = computed(() => {
     
   </header>
 </template>
-
-<style scoped>
-.page-header {
-  display: flex;
-  flex-direction: column;
-  gap: 0.5rem;
-  grid-column: 1 / -1;
-  margin-bottom: 2rem;
-}
-</style>
