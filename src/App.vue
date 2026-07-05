@@ -3,6 +3,7 @@ import Counter from '@/components/Counter.vue'
 import CounterSummary from '@/components/CounterSummary.vue'
 import ReactivityFundamentals from '@/components/ReactivityFundamentals.vue'
 import ComputedProperties from '@/components/ComputedProperties.vue'
+import ClassStyleBindings from '@/components/ClassStyleBindings.vue'
 import { ref } from 'vue'
 
 //Data
@@ -32,6 +33,7 @@ const resetAllCounts = () => {
 <template>
 
   <!-- Components -->
+  <ClassStyleBindings />
   <ComputedProperties />
   <ReactivityFundamentals />
 
@@ -58,6 +60,13 @@ const resetAllCounts = () => {
 </template>
 
 <style scoped>
+.page-header {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  grid-column: 1 / -1;
+  margin-bottom: 2rem;
+}
 .breed-list {
   display: flex;
   flex-direction: column;
