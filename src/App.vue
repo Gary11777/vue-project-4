@@ -4,6 +4,7 @@ import CounterSummary from '@/components/CounterSummary.vue'
 import ReactivityFundamentals from '@/components/ReactivityFundamentals.vue'
 import ComputedProperties from '@/components/ComputedProperties.vue'
 import ClassStyleBindings from '@/components/ClassStyleBindings.vue'
+import ConditionalRendering from '@/components/ConditionalRendering.vue'
 import { ref } from 'vue'
 
 //Data
@@ -33,6 +34,7 @@ const resetAllCounts = () => {
 <template>
 
   <!-- Components -->
+  <ConditionalRendering />
   <ClassStyleBindings />
   <ComputedProperties />
   <ReactivityFundamentals />
@@ -67,10 +69,29 @@ const resetAllCounts = () => {
   grid-column: 1 / -1;
   margin-bottom: 2rem;
 }
+:deep(.underline) {
+  text-decoration: underline;
+  text-decoration-color: gray;
+  text-decoration-thickness: 2px;
+  text-decoration-style: solid;
+}
 .breed-list {
   display: flex;
   flex-direction: column;
   gap: 1rem;
   grid-column: 1 / -1;
+}
+.demo-container {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  grid-column: 1 / -1;
+}
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  grid-column: 1 / -1;
+  margin-bottom: 5rem;
 }
 </style>
