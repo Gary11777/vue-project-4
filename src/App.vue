@@ -5,6 +5,8 @@ import ReactivityFundamentals from '@/components/ReactivityFundamentals.vue'
 import ComputedProperties from '@/components/ComputedProperties.vue'
 import ClassStyleBindings from '@/components/ClassStyleBindings.vue'
 import ConditionalRendering from '@/components/ConditionalRendering.vue'
+import ListRendering from '@/components/ListRendering.vue'
+import TodoList from '@/components/TodoList.vue'
 import { ref } from 'vue'
 
 //Data
@@ -34,6 +36,8 @@ const resetAllCounts = () => {
 <template>
 
   <!-- Components -->
+  <TodoList />
+  <ListRendering />
   <ConditionalRendering />
   <ClassStyleBindings />
   <ComputedProperties />
@@ -71,7 +75,7 @@ const resetAllCounts = () => {
 }
 :deep(.underline) {
   text-decoration: underline;
-  text-decoration-color: gray;
+  text-decoration-color: #2c3e50;
   text-decoration-thickness: 2px;
   text-decoration-style: solid;
 }
