@@ -7,6 +7,7 @@ import ClassStyleBindings from '@/components/ClassStyleBindings.vue'
 import ConditionalRendering from '@/components/ConditionalRendering.vue'
 import ListRendering from '@/components/ListRendering.vue'
 import TodoList from '@/components/TodoList.vue'
+import EventHandling from '@/components/EventHandling.vue'
 import { ref } from 'vue'
 
 //Data
@@ -36,6 +37,7 @@ const resetAllCounts = () => {
 <template>
 
   <!-- Components -->
+  <EventHandling />
   <TodoList />
   <ListRendering />
   <ConditionalRendering />
