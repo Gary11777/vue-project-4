@@ -9,6 +9,7 @@ import ListRendering from '@/components/ListRendering.vue'
 import TodoList from '@/components/TodoList.vue'
 import EventHandling from '@/components/EventHandling.vue'
 import FormInputBindings from '@/components/FormInputBindings.vue'
+import Watchers from '@/components/Watchers.vue'
 import { ref } from 'vue'
 
 //Data
@@ -38,6 +39,7 @@ const resetAllCounts = () => {
 <template>
 
   <!-- Components -->
+  <Watchers />
   <FormInputBindings />
   <EventHandling />
   <TodoList />
