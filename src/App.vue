@@ -10,6 +10,7 @@ import TodoList from '@/components/TodoList.vue'
 import EventHandling from '@/components/EventHandling.vue'
 import FormInputBindings from '@/components/FormInputBindings.vue'
 import Watchers from '@/components/Watchers.vue'
+import TemplateRefs from '@/components/TemplateRefs.vue'
 import { ref } from 'vue'
 
 //Data
@@ -39,6 +40,7 @@ const resetAllCounts = () => {
 <template>
 
   <!-- Components -->
+  <TemplateRefs />
   <Watchers />
   <FormInputBindings />
   <EventHandling />
@@ -103,5 +105,9 @@ const resetAllCounts = () => {
   gap: 2rem;
   grid-column: 1 / -1;
   margin-bottom: 5rem;
+}
+:deep(.box) {
+  border: 1px solid;
+  padding: 2rem;
 }
 </style>
