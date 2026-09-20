@@ -70,10 +70,3 @@ watch([x, () => y.value], ([newX, newY]) => {
     </div>
   </section>
 </template>
-
-<style scoped>
-.box {
-  border: 1px solid;
-  padding: 2rem;
-}
-</style>
