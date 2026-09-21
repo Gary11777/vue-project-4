@@ -11,6 +11,8 @@ import EventHandling from '@/components/EventHandling.vue'
 import FormInputBindings from '@/components/FormInputBindings.vue'
 import Watchers from '@/components/Watchers.vue'
 import TemplateRefs from '@/components/TemplateRefs.vue'
+import ComponentBasics from '@/components/ComponentBasics.vue'
+import TabbedInterface from '@/components/TabbedInterface.vue'
 import { ref } from 'vue'
 
 //Data
@@ -40,6 +42,8 @@ const resetAllCounts = () => {
 <template>
 
   <!-- Components -->
+  <TabbedInterface />
+  <ComponentBasics />
   <TemplateRefs />
   <Watchers />
   <FormInputBindings />
