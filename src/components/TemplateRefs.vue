@@ -8,9 +8,9 @@ const list = ref([1, 2, 3])
 
 const itemRefs = useTemplateRef('items')
 
-onMounted(() => {
-  alert(itemRefs.value.map(i => i.textContent))
-})
+// onMounted(() => {
+//   alert(itemRefs.value.map(i => i.textContent))
+// })
 
 
 // const focusInput = () => {
