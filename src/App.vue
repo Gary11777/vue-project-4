@@ -13,6 +13,7 @@ import Watchers from '@/components/Watchers.vue'
 import TemplateRefs from '@/components/TemplateRefs.vue'
 import ComponentBasics from '@/components/ComponentBasics.vue'
 import TabbedInterface from '@/components/TabbedInterface.vue'
+import LifecycleHooks from '@/components/LifecycleHooks.vue'
 import { ref } from 'vue'
 
 //Data
@@ -42,6 +43,7 @@ const resetAllCounts = () => {
 <template>
 
   <!-- Components -->
+  <LifecycleHooks />
   <TabbedInterface />
   <ComponentBasics />
   <TemplateRefs />
